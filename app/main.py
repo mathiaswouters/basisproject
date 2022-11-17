@@ -5,22 +5,22 @@ app = FastAPI()
 
 
 class City(BaseModel):
-    name_city: str
-    country: str
-    mayor: str
+    name_city: str | None = None
+    country: str | None = None
+    mayor: str | None = None
     population: int | None = None
     date_founded: int | None = None
     area: float | None = None
-    ranking: int
+    ranking: int | None = None
 
 
 class Country(BaseModel):
-    country: str
-    leader: str
-    capital: str
+    country: str | None = None
+    leader: str | None = None
+    capital: str | None = None
     population: int | None = None
     area: float | None = None
-    ranking: int
+    ranking: int | None = None
 
 
 city1 = {
@@ -102,9 +102,12 @@ country4 = {
 city_list = [city1, city2, city3, city4]
 country_list = [country1, country2, country3, country4]
 
+# @app.post("/country/{country}/{leader}/{capital}/{population}/{area}/{ranking}")
 @app.post("/country")
-async def post_country(country: Country):
-    return country
+async def post_country(country: str | None = None, leader: str | None = None, capital: str | None = None, population: int | None = None, area: float | None = None, ranking: int | None = None):
+    custom_country = {"country": country, "leader": leader, "capital": capital, "population": population, "area": area, "ranking": ranking,}
+    country_list.append(custom_country)
+    return custom_country
 
 
 @app.get("/city")
