@@ -8,8 +8,8 @@ origins = [
     "http://localhost/",
     "http://localhost:8080/",
     "https://localhost.tiangolo.com/",
-    "http://127.0.0.1:5500/"
-    
+    "http://127.0.0.1:5500",
+    "https://mathiaswouters.github.io"
 ]
 
 app.add_middleware(
