@@ -114,9 +114,13 @@ async def post_country(country: str | None = None, leader: str | None = None, ca
 async def get_city():
     return city_list
 
+@app.get("/country")
+async def get_country():
+    return country_list
+
 
 @app.get("/country/{ranking}")
-async def get_country(ranking: int):
+async def get_country_ranking(ranking: int):
     for country in country_list:
         if country.get("ranking") == ranking:
             return country
