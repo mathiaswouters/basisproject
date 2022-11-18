@@ -54,6 +54,6 @@ In mijn front-end roep ik de 2 get functies op die dat dan de landen/steden in m
 
 # Links
 
-Hosted API: https://world-ranking-service-mathiaswouters.cloud.okteto.net
-Front-end repo: https://github.com/mathiaswouters/mathiaswouters.github.io
-Hosted front-end: https://mathiaswouters.github.io/
+- Hosted API: [Hosted API link](https://world-ranking-service-mathiaswouters.cloud.okteto.net)
+- Front-end repo: [Front-end repo link](https://github.com/mathiaswouters/mathiaswouters.github.io)
+- Hosted front-end: [Hosted front-end link](https://mathiaswouters.github.io/)
