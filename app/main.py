@@ -5,9 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "http://localhost/",
-    "http://localhost:8080/",
-    "https://localhost.tiangolo.com/",
+    "*",
     "http://127.0.0.1:5500",
     "https://mathiaswouters.github.io"
 ]
@@ -123,7 +121,7 @@ country_list = [country1, country2, country3, country4]
 async def post_country(country: str | None = None, leader: str | None = None, capital: str | None = None, population: int | None = None, area: float | None = None, ranking: int | None = None):
     custom_country = {"country": country, "leader": leader, "capital": capital, "population": population, "area": area, "ranking": ranking,}
     country_list.append(custom_country)
-    return custom_country
+    return country_list
 
 
 @app.get("/city")
